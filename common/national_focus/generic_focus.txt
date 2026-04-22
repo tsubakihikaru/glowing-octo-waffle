@@ -1,0 +1,442 @@
+focus_tree = {
+	id = generic_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 15
+			tag = root
+		}
+	}
+
+	default = yes
+
+	############ Army and Air Focuses ############
+
+	focus = {
+		id = generic_1
+		icon = GFX_focus_generic_air_defense
+		x = 5
+		y = 0
+
+		cost = 5
+
+		completion_reward = {
+			add_political_power = 0.05
+		}
+	}
+
+	focus = {
+		id = generic_2
+		icon = GFX_focus_generic_air_bases
+		x = 5
+		y = 1
+
+		available = {
+			is_subject = yes
+		}
+
+		prerequisite = {
+			focus = generic_1
+		}
+
+		completion_reward = {
+			add_political_power = 0.05
+		}
+
+		cost = 10
+	}
+
+	focus = {
+		id = generic_3
+		icon = GFX_focus_generic_air_carrier
+		x = 6
+		y = 2
+
+		cost = 5
+
+		completion_reward = {
+			add_political_power = 0.05
+		}
+
+		prerequisite = {
+			focus = generic_2
+		}
+	}
+
+	focus = {
+		id = generic_4
+		icon = GFX_focus_generic_air_research_boost
+		x = 4
+		y = 2
+
+		cost = 5
+
+		completion_reward = {
+			add_political_power = 0.05
+		}
+
+		prerequisite = {
+			focus = generic_2
+		}
+	}
+
+	focus = {
+		id = generic_5
+		icon = GFX_focus_generic_army_attack
+		x = 5
+		y = 3
+
+		cost = 5
+
+		prerequisite = {
+			focus = generic_3
+			focus = generic_4
+			focus = generic_22
+		}
+
+		completion_reward = {
+			
+		}
+
+		}
+	
+	focus = {
+		id = generic_6
+		icon = GFX_focus_generic_army_doctrines_2
+		x = 6
+		y = 4
+
+		cost = 5
+
+		prerequisite = {
+			focus = generic_5
+		}
+
+		completion_reward = {
+			add_political_power = 0.05
+			add_divisional_commander_xp = 70
+		}
+	}
+
+	focus = {
+		id = generic_7
+		icon = GFX_focus_generic_army_tanks2
+		X = 4
+		Y = 4
+
+		cost = 5
+
+		prerequisite = {
+			focus = generic_5
+		}
+
+		completion_reward = {
+			add_political_power = 7
+		}
+	}
+
+	focus = {
+		id = generic_8
+		icon = GFX_focus_generic_strike_at_democracy2
+		x = 5
+		y = 5
+
+		prerequisite = {
+			focus = generic_6
+			focus = generic_7
+		}
+
+		completion_reward = {
+			add_political_power = 9
+		}
+
+		cost = 5
+	}
+
+	############ Naval Focuses ############
+
+	focus = {
+		id = generic_9
+		icon = GFX_focus_generic_naval_discipline
+		x = 1
+		y = 0
+
+		cost = 5
+
+		completion_reward = {
+			add_political_power = 0.05
+		}
+
+	}
+
+	focus = {
+		id = generic_10
+		icon = GFX_focus_generic_naval_invasion
+		x = 0
+		y = 1
+
+		cost = 5
+
+		prerequisite = {
+			focus = generic_9
+		}
+
+		completion_reward = {
+			add_political_power = 0.05
+		}
+	}
+
+	focus = {
+		id = generic_11
+		icon = GFX_focus_generic_naval_invasion_tank
+		x = 2
+		y = 1
+
+		cost = 5
+
+		prerequisite = {
+			focus = generic_9
+		}
+
+		completion_reward = {
+			add_political_power = 0.05
+		}
+	}
+		focus = {
+		id = generic_18
+		icon = GFX_focus_generic_jungle_training
+		x = 1
+		y = 3
+
+		prerequisite = {
+			focus = generic_17
+		}
+
+		cost = 5
+		
+		completion_reward = {
+			add_political_power = 0.05
+		}
+	}
+
+	focus = {
+		id = generic_19
+		icon = GFX_focus_generic_mountain_training
+		x = 1
+		y = 4
+
+		prerequisite = {
+			focus = generic_17
+			focus = generic_18
+		}
+
+		cost = 5
+		
+		completion_reward = {
+			add_political_power = 0.05
+		}
+	}
+
+	focus = {
+		id = generic_20
+		icon = GFX_focus_generic_copy_plane_designs
+		x = -1
+		y = 3.5
+
+		prerequisite = {
+			focus = generic_17
+			focus = generic_18
+			focus = generic_19
+			focus = generic_2
+		}
+
+		cost = 5
+		
+		completion_reward = {
+			add_political_power = 0.05
+		}
+	}
+
+	focus = {
+		id = generic_22
+		icon = GFX_focus_generic_destroyer
+		x = 3
+		y = 3.5
+
+		cost = 5
+
+		prerequisite = {
+			focus = generic_17
+			focus = generic_18
+			focus = generic_4
+		}
+
+		completion_reward = {
+			add_political_power = 0.05
+		}
+	}
+		focus = {
+		id = generic_17
+		icon = GFX_focus_generic_desert_training
+		x = 1
+		y = 2
+
+		prerequisite = {
+			focus = generic_11
+			focus = generic_9
+			focus = generic_10
+		}
+
+		cost = 5
+
+		completion_reward = {
+			add_political_power = 0.05
+		}
+
+
+	}
+
+
+	#### Political Focuses ############
+
+    focus = {
+		id = generic_13
+		icon = GFX_goal_generic_propaganda
+		x = 11
+		y = 0
+
+		cost = 5
+
+		completion_reward = {
+			add_political_power = 9
+		}
+	}
+
+	focus = {
+		id = generic_12
+		icon = GFX_focus_generic_democratic_europe
+		x = 9
+		y = 1
+
+		cost = 10
+
+		completion_reward = {
+			add_political_power = 0.05
+			
+		}
+
+		prerequisite = {
+			focus = generic_13
+		}
+
+		mutually_exclusive = {
+			focus = generic_21
+			focus = generic_14
+		}
+	}
+
+	focus = {
+		id = generic_21
+		icon = GFX_focus_generic_communist
+		cost = 10
+		x = 11
+		y = 1
+		prerequisite = {
+			focus = generic_13
+		}
+
+		mutually_exclusive = {
+			focus = generic_12
+			focus = generic_14
+		}
+
+		completion_reward = {
+			add_political_power = 79
+		}
+	
+	}
+
+	focus = {
+		id = generic_14
+		icon = GFX_focus_generic_concessions
+		x = 13
+		y = 1
+
+		prerequisite = {
+			focus = generic_13
+		}
+
+		mutually_exclusive = {
+			focus = generic_12
+			focus = generic_21
+		}
+
+		completion_reward = {
+			load_focus_tree = china_communist_focus_sea
+		}
+
+		cost = 5
+}
+
+    focus = {
+		id = generic_15
+		icon = GFX_focus_generic_devaluation
+		x = 9
+		y = 2
+
+		prerequisite = {
+			focus = generic_12
+		}
+
+		cost = 10
+
+		completion_reward = {
+			add_political_power = 0.05
+		}
+	}
+
+	focus = {
+		id = generic_16
+		icon = GFX_focus_generic_worker_administration
+		x = 11
+		y = 2
+
+		prerequisite = {
+			focus = generic_21
+		}
+
+		cost = 10
+
+		completion_reward = {
+			add_political_power = -0.05
+		}
+	}
+
+	#### Generic Focuses ############
+
+	focus = {
+		id = generic_23
+		icon = GFX_goal_generic_build_tank
+		x = 17
+		y = 0
+
+		cost = 5
+
+		completion_reward = {
+			add_political_power = 0.05
+		}
+	}
+
+	focus = {
+		id = generic_24
+		icon = GFX_goal_generic_build_navy
+		x = 17
+		y = 1
+
+		cost = 5
+
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+}
